@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono&display=swap');
+
+
+// 字體
+$fontFamily_Lato: 'Lato', sans-serif;
+$fontFamily_Roboto: 'Roboto Mono', monospace;
+$sidebar-width: 296px;
+
+// 顏色
+$color_1: #FFFFFF;
+$color_2: #CED4DA;
+$color_3: #F8F9FA;
+$color_4: #212529;
+$color_5: #6C757D;
+$color_6: #198754;
+$color_7: #DC3545;
+
+
+
+// aside scss
+.sidebar {
+  width: $sidebar-width;
+  background: $color_3;
+  position: fixed;
+  top: 0;
+}
+.main {
+  width: calc(100vw - $sidebar-width);
+  margin-left: $sidebar-width;  
+}
+.mainTop {
+  background: $color_3;
+}
+.adminText {  
+  padding: 32px 0px;
+  transition: .5s ease;
+}
+.fs-4 {
+  line-height: 33px;
+  color: $color_4;
+  font-family: $fontFamily_Lato;
+  font-weight: bold;
+}
+.addIcon {
+  color: $color_6;
+  transition: .5s ease;
+}
+.fs-6 {
+  line-height: 24px;
+  color: $color_4;
+  font-family: $fontFamily_Lato;
+  font-weight: bold;
+}
+
+.asideTitle {
+  padding: 32px 113px 32px 32px;
+}
+.author {
+  display: flex;
+  padding-left: 32px;
+  padding-bottom: 32px;
+  gap: 16px;
+}
+.authorImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;  
+}
+.asideMenu {
+  padding-left: 32px;  
+}
+.textColor {
+  color: $color_4;
+}
+.textColorUser {  
+  color: $color_6;
+}
+.textColorUser::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 32px;
+  background: $color_6;
+}
+.arrowDown {
+  width: 12px;
+  color:$color_6 !important;
+}
+.textSize {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $fontFamily_Lato;
+}
+
+.pagination {
+  margin-top: 63px;
+  margin-bottom: 32px;  
+}
+.page-item .page-link {
+  border: 1px solid $color_6;
+  color: $color_4;
+}
+.page-item .page-link.active {
+  background: $color_6;
+  color: $color_1;
+}
+.fwBold {
+  font-weight: bold;
+  color: $color_6;
+}
+
+// editModal
+.fs-14 {
+  line-height: 24px;
+  font-family: $fontFamily_Lato;
+  color: $color_5;
+}
+
+// addAdmin
+.addAdminTitle {
+  font-size: 20px;
+  line-height: 33px;
+  font-family: $fontFamily_Lato;
+  font-weight: bold;
+}
+hr {
+  color: $color_2;
+  opacity:1;  
+}
+.warningText {
+  font-size: 16px;
+  line-height: 33px;
+  font-family: $fontFamily_Lato;
+  font-weight: bold;
+}
+
+.inputBox {
+  font-size: 16px;
+  line-height: 33px;
+  font-family: $fontFamily_Lato;
+  font-weight: bold;
+  color: $color_6;
+  text-align: center;
+}
+.selectBox {
+  font-size: 16px;
+  line-height: 24px;
+  color: $color_5;
+  font-family: $fontFamily_Lato;
+}
+.editInputBox_1 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $fontFamily_Lato;
+  background: $color_3;
+}
+.editInputBox_2 {
+  font-size: 16px;
+  line-height: 33px;
+  font-family: $fontFamily_Lato;
+  font-weight: bold;
+  color: $color_2;
+  text-align: center;
+}
+.form-check-input {
+  border: 2px solid $color_4;
+  align-self: flex-start;  
+}
+
+// Responsive
+
+@media (max-width: 992px) {
+  .adminText {
+    font-size: 18px !important;
+    margin-right: 10px !important;
+  }
+  .adminText {
+    padding: 15px 0px;
+  }
+  .pagination {
+    display: none;    
+  }
+}
+@media (max-width: 767px) {
+  .addText {
+    display: none;
+  }
+  .addIcon {
+    font-size: 2rem !important;
+  }
+}

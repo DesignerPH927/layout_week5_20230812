@@ -1,0 +1,17 @@
+@import './bootstrap/scss/functions';
+
+@import './setting/variables';
+
+@import './bootstrap/scss/bootstrap';
+
+
+
+
+@import './setting/cssReset'; // css reset
+@import './setting/base'; // 全站設定
+
+// @import './layout/header.scss';
+// @import './layout/footer.scss';
+
+
+@import './pages/index.scss';
